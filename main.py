@@ -1,5 +1,5 @@
 import joblib
-from fastapi import FastAPI, HTTPException #Query
+from fastapi import FastAPI, HTTPException
 from src.base_model import CreditCardRecord
 import os
 
