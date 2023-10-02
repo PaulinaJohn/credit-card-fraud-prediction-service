@@ -6,12 +6,7 @@ import os
 
 model = joblib.load('model/model_v1.joblib')
 
-app = FastAPI()
-
-# @app.get("/")
-# async def read_service_root():
-#      return {"Hello": f"from {os.getenv('ENV', 'DEFAULT_ENV')}"}
-     
+app = FastAPI() 
 
 @app.post("/creditcard_fraud-predictor")
 async def check_card_transaction(data: CreditCardRecord):
@@ -29,6 +24,7 @@ async def check_card_transaction(data: CreditCardRecord):
     V4 = data.imput10
 
     variables = [V17, V14, V12, V10, V16, V11, V9, V7, V18, V4]
+     
     # Passing variables into saved model for prediction. Remember to pass the variables in the right shape.
 
     try:
