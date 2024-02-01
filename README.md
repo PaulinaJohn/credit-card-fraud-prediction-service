@@ -1,1 +1,1 @@
-# credit-card-fraud-predictor
+# credit-card-fraud-prediction-service
